@@ -1,2 +1,6 @@
 .venv
 .DS_Store
+*.csv
+test*.*
+__pycache__/
+*.pyc

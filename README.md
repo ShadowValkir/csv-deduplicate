@@ -4,7 +4,7 @@ A small Python utility to remove duplicate rows from CSV files and save a cleane
 
 ## Features
 
-- Remove duplicate rows based on full-row comparison
+- Remove duplicate rows based on full-row or column-subset comparison
 - Preserve original CSV structure
 - Easy command-line usage
 
@@ -28,12 +28,17 @@ Run the script with the input CSV file and optionally specify an output file:
 
 Example:
 ```bash
-python deduplicate.py input.csv -o output.csv
+python deduplicate_csv.py input.csv -o output.csv
+```
+
+Deduplicate on specific columns only:
+```bash
+python deduplicate_csv.py input.csv -o output.csv -s name email
 ```
 
 > **Danger:** If no output file is specified, the original file will be overwritten by default.
 ```bash
-python deduplicate.py input.csv # input.csv is overwritten
+python deduplicate_csv.py input.csv # input.csv is overwritten
 ```
 
 ## Notes
